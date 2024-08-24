@@ -1,0 +1,45 @@
+.text-content{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 5px 10px;
+}
+
+.img-container{
+    
+        width: 30%;
+        height: 30%;
+        object-fit: cover;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+        max-width: 100%;
+        margin-left: 190px;
+    }
+      
+@media (max-width: 768px) {
+          .image-container img{
+              width: 30%;
+              height: auto;
+              object-fit: cover;
+              display: block;
+              margin: 0 auto;
+          }
+      }
+
+
+.card{
+        justify-content: center;
+        display: flex;
+     }
+
+
+@media (max-width: 768px) {
+        .footer-links{
+          justify-content: center;
+          display: flex;
+        }
+}
+      
