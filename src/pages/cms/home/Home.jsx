@@ -1,13 +1,24 @@
 import React from "react";
 import Carousel from "react-material-ui-carousel";
-import image1 from "../../img/dragon-ball-landscape-1.jpg";
-import image3 from "../../img/shinchan3.webp";
-import image2 from "../../img/images (1).jpg";
+
+// import image1 from "../../img/dragon-ball-landscape-1.jpg";
+// import image3 from "../../img/shinchan3.webp";
+// import image2 from "../../img/images (1).jpg";
+
+import image2 from "../../img/bird.jpg";
 import image4 from "../../img/images (2).jpg";
+import img from "../../img/flower.jpg";
+import img1 from "../../img/panda.jpeg";
+
+import image9 from "../../img/windmills.jpg";
+import image10 from "../../img/sea.jpg";
+import image11 from "../../img/sea1.jpg";
+
 import image5 from "../../img/1697460957Barrel1d.svg";
 import image6 from "../../img/Pumpkin_1724158720.svg";
 import image7 from "../../img/man34_1723551172.svg";
 import image8 from "../../img/1695216005Grapes19b.svg";
+
 
 import Grid from "@mui/material/Grid";
 import Card from "@mui/material/Card";
@@ -22,10 +33,11 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import "./home.css";
-import { AppBar, Toolbar, Container, Link, IconButton, Box } from '@mui/material';
-import { Facebook, Twitter, Instagram, LinkedIn } from '@mui/icons-material';
 
 import Team from './Team.jsx';
+
+import Header from "./Header.jsx";
+import Footer from "./Footer.jsx";
 
 
 
@@ -34,12 +46,17 @@ const Home = () => {
     {
       name: "Random Name #1",
       description: "Probably the most random thing you have ever seen!",
-      image: image1,
+      image: image9,
     },
     {
       name: "Random Name #2",
       description: "Hello World!",
-      image: image3,
+      image: image10,
+    },
+    {
+      name: "Random Name #2",
+      description: "Hello World!",
+      image: image11,
     },
   ];
 
@@ -60,7 +77,7 @@ const Home = () => {
       title: "Lizard2",
       description:
         "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
-      image: image2,
+      image: img,
       buttonText1: "Share",
       buttonText2: "Learn More",
     },
@@ -69,7 +86,7 @@ const Home = () => {
       title: "Lizard3",
       description:
         "Lizards are a widespread group of squamate reptiles, with over 6,000 species, ranging across all continents except Antarctica",
-      image: image2,
+      image: img1,
       buttonText1: "Share",
       buttonText2: "Learn More",
     },
@@ -90,11 +107,15 @@ const Home = () => {
 
   return (
     <>
+
+    <Header/>
+
+
       <Carousel>
         {items.map((item) => {
           return (
             <>
-              <img src={item.image} height="100%" width="100%" />
+              <img src={item.image} height="50%" width="100%" />
             </>
           );
         })}
@@ -243,70 +264,8 @@ const Home = () => {
 <br></br>
 <br></br>
 
-
-
-<Box
-  component="footer"
-  sx={{
-    background: 'linear-gradient(to right, #3f51b5, #1a237e)',
-    color: 'white',
-    paddingTop: 2,
-    paddingBottom: 2,
-  }}
->
-  <Container maxWidth="md">
-    <Grid container spacing={4} alignItems="center" justifyContent="space-between">
-      {/* Pages Links */}
-      <Grid item xs={12} md={3} justifyContent="center" className="footer-links">
-        <Link href="/" color="inherit" sx={{ marginRight: 3, textDecoration: 'none', '&:hover': { textDecoration: 'none', color: '#1a237e' } }}>
-          Home
-        </Link>
-        <Link href="/about" color="inherit" sx={{ marginRight: 3, textDecoration: 'none', '&:hover': { textDecoration: 'none', color: '#1a237e' } }}>
-          About
-        </Link>
-        <Link href="/services" color="inherit" sx={{ marginRight: 3, textDecoration: 'none', '&:hover': { textDecoration: 'none', color: '#1a237e' } }}>
-          Services
-        </Link>
-        <Link href="/contact" color="inherit" sx={{ marginRight: 3, textDecoration: 'none', '&:hover': { textDecoration: 'none', color: '#1a237e' } }}>
-          Contact
-        </Link>
-      </Grid>
-
-      {/* Social Media Icons */}
-      <Grid item>
-        <IconButton href="https://facebook.com" target="_blank" color="inherit" sx={{ '&:hover': { color: '#1877f2' } }}>
-          <Facebook />
-        </IconButton>
-        <IconButton href="https://twitter.com" target="_blank" color="inherit" sx={{ '&:hover': { color: '#1da1f2' } }}>
-          <Twitter />
-        </IconButton>
-        <IconButton href="https://instagram.com" target="_blank" color="inherit" sx={{ '&:hover': { color: '#e1306c' } }}>
-          <Instagram />
-        </IconButton>
-        <IconButton href="https://linkedin.com" target="_blank" color="inherit" sx={{ '&:hover': { color: '#0077b5' } }}>
-          <LinkedIn />
-        </IconButton>
-      </Grid>
-
-      {/* Terms and Conditions */}
-      <Grid item>
-        <Link href="/terms" color="inherit" sx={{ '&:hover': { textDecoration: 'underline' } }}>
-          Terms & Conditions
-        </Link>
-      </Grid>
-    </Grid>
-
-    {/* Copyright Section */}
-    <Toolbar sx={{ justifyContent: 'center', borderTop: '1px solid rgba(255, 255, 255, 0.2)', paddingTop: 2 }}>
-      <Typography variant="body2" color="inherit">
-        © 2024 Your Company. All rights reserved.
-      </Typography>
-    </Toolbar>
-  </Container>
-</Box>
-
-      
-    </>
+<Footer/>
+ </>
   );
 };
 

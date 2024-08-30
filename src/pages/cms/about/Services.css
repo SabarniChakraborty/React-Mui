@@ -1,0 +1,36 @@
+.services{
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+
+.services h1{
+    color:rgb(122, 194, 13);
+}
+
+.services p{
+    font-size: 22px;
+}
+
+
+.card{
+    padding: 20px;
+    text-align: center;
+}
+
+.icon-container {
+    
+    background-color: rgb(122, 194, 13);
+    color:white;
+    height: 60px;
+    width: 60px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-bottom: 1rem;
+    
+}
+
+
+
+
